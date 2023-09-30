@@ -1,5 +1,7 @@
 # Original sharpkeys but with theme black
-![image](https://github.com/flower-spring/sharpkeys_partialy_black_themed/assets/71689178/11d6bc79-d425-4e61-bc70-d1646a4ed973)
+![image](https://github.com/flower-spring/sharpkeys_partialy_black_themed/assets/71689178/8f243904-7796-4a0d-b7f1-bf55ce367fde)
+
+
 
 
 
