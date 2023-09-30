@@ -6,7 +6,6 @@ using System.Windows.Forms;
 using System.ComponentModel;
 using System.IO;
 using Microsoft.Win32;
-using System.Runtime.CompilerServices;
 
 namespace SharpKeys
 {
@@ -18,7 +17,7 @@ namespace SharpKeys
         // Field for saving window position
         private Rectangle m_rcWindow;
 
-        // Field for registy storage
+        // Field for registry storage
         private string m_strRegKey = "Software\\RandyRants\\SharpKeys";
 
         // Hashtable for tracking text to scan codes
@@ -57,6 +56,8 @@ namespace SharpKeys
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.Container components = null;
+        //private object evt;
+        //private object console;
 
         public Dialog_Main()
         {
@@ -123,25 +124,30 @@ namespace SharpKeys
             this.lvKeys.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            
             this.lvKeys.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.lvcFrom,
-            this.lvcTo});
+            this.lvcTo,
+            
+            });
             this.lvKeys.ContextMenu = this.mnuPop;
-            this.lvKeys.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.lvKeys.ForeColor = System.Drawing.Color.White;
             this.lvKeys.FullRowSelect = true;
             this.lvKeys.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.lvKeys.HideSelection = false;
-            this.lvKeys.Location = new System.Drawing.Point(26, 82);
-            this.lvKeys.Margin = new System.Windows.Forms.Padding(6);
+            this.lvKeys.Location = new System.Drawing.Point(21, 68);
+            this.lvKeys.Margin = new System.Windows.Forms.Padding(5);
             this.lvKeys.MultiSelect = false;
             this.lvKeys.Name = "lvKeys";
-            this.lvKeys.Size = new System.Drawing.Size(1059, 476);
+            this.lvKeys.Size = new System.Drawing.Size(867, 397);
             this.lvKeys.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lvKeys.TabIndex = 0;
             this.lvKeys.UseCompatibleStateImageBehavior = false;
             this.lvKeys.View = System.Windows.Forms.View.Details;
             this.lvKeys.SelectedIndexChanged += new System.EventHandler(this.lvKeys_SelectedIndexChanged);
             this.lvKeys.DoubleClick += new System.EventHandler(this.lvKeys_DoubleClick);
+            this.lvKeys.BackColor = Color.Black;
+            //this.lvKeys.EnableHeadersVisualStyles = false;
+            //this.lvKeys.ColumnHeadersDefaultCellStyle.BackColor = Color.Blue;
             // 
             // lvcFrom
             // 
@@ -193,11 +199,12 @@ namespace SharpKeys
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSave.Location = new System.Drawing.Point(749, 572);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(6);
+            this.btnSave.BackColor = System.Drawing.Color.Black;
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(613, 477);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(5);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(194, 42);
+            this.btnSave.Size = new System.Drawing.Size(159, 35);
             this.btnSave.TabIndex = 5;
             this.btnSave.Text = "&Write to Registry";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -206,11 +213,12 @@ namespace SharpKeys
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.SystemColors.Control;
-            this.btnClose.Location = new System.Drawing.Point(954, 572);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(6);
+            this.btnClose.BackColor = System.Drawing.Color.Black;
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(781, 477);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(5);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(132, 42);
+            this.btnClose.Size = new System.Drawing.Size(108, 35);
             this.btnClose.TabIndex = 6;
             this.btnClose.Text = "&Close";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -219,11 +227,12 @@ namespace SharpKeys
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAdd.BackColor = System.Drawing.SystemColors.Control;
-            this.btnAdd.Location = new System.Drawing.Point(25, 573);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(6);
+            this.btnAdd.BackColor = System.Drawing.Color.Black;
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(20, 478);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(5);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(132, 42);
+            this.btnAdd.Size = new System.Drawing.Size(108, 35);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "&Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -232,11 +241,12 @@ namespace SharpKeys
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDelete.BackColor = System.Drawing.SystemColors.Control;
-            this.btnDelete.Location = new System.Drawing.Point(311, 572);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(6);
+            this.btnDelete.BackColor = System.Drawing.Color.Black;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(254, 477);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(5);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(132, 42);
+            this.btnDelete.Size = new System.Drawing.Size(108, 35);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "&Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -245,11 +255,12 @@ namespace SharpKeys
             // btnEdit
             // 
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEdit.BackColor = System.Drawing.SystemColors.Control;
-            this.btnEdit.Location = new System.Drawing.Point(168, 573);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(6);
+            this.btnEdit.BackColor = System.Drawing.Color.Black;
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Location = new System.Drawing.Point(137, 478);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(5);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(132, 42);
+            this.btnEdit.Size = new System.Drawing.Size(108, 35);
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "&Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -258,11 +269,11 @@ namespace SharpKeys
             // btnDeleteAll
             // 
             this.btnDeleteAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDeleteAll.BackColor = System.Drawing.SystemColors.Control;
-            this.btnDeleteAll.Location = new System.Drawing.Point(454, 572);
-            this.btnDeleteAll.Margin = new System.Windows.Forms.Padding(6);
+            this.btnDeleteAll.BackColor = System.Drawing.Color.Red;
+            this.btnDeleteAll.Location = new System.Drawing.Point(371, 477);
+            this.btnDeleteAll.Margin = new System.Windows.Forms.Padding(5);
             this.btnDeleteAll.Name = "btnDeleteAll";
-            this.btnDeleteAll.Size = new System.Drawing.Size(132, 42);
+            this.btnDeleteAll.Size = new System.Drawing.Size(108, 35);
             this.btnDeleteAll.TabIndex = 4;
             this.btnDeleteAll.Text = "De&lete All";
             this.btnDeleteAll.UseVisualStyleBackColor = false;
@@ -274,22 +285,23 @@ namespace SharpKeys
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label11.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label11.Location = new System.Drawing.Point(16, 688);
-            this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label11.Location = new System.Drawing.Point(13, 573);
+            this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(1078, 6);
+            this.label11.Size = new System.Drawing.Size(882, 5);
             this.label11.TabIndex = 7;
+           
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label1.Location = new System.Drawing.Point(28, 711);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.BackColor = System.Drawing.Color.DarkGreen;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(23, 592);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(522, 25);
+            this.label1.Size = new System.Drawing.Size(421, 20);
             this.label1.TabIndex = 9;
             this.label1.Text = "SharpKeys 3.9.4 - Copyright 2004 - 2022 RandyRants.com";
             // 
@@ -297,25 +309,27 @@ namespace SharpKeys
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label2.Location = new System.Drawing.Point(28, 744);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.BackColor = System.Drawing.Color.DarkGreen;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(23, 620);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(412, 25);
+            this.label2.Size = new System.Drawing.Size(334, 20);
             this.label2.TabIndex = 10;
             this.label2.Text = "Registry hack for remapping keys for Windows";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // urlMain
             // 
             this.urlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.urlMain.AutoSize = true;
-            this.urlMain.BackColor = System.Drawing.Color.Transparent;
+            this.urlMain.BackColor = System.Drawing.Color.Black;
+            this.urlMain.ForeColor = System.Drawing.Color.White;
             this.urlMain.LinkColor = System.Drawing.SystemColors.HotTrack;
-            this.urlMain.Location = new System.Drawing.Point(826, 744);
-            this.urlMain.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.urlMain.Location = new System.Drawing.Point(676, 620);
+            this.urlMain.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.urlMain.Name = "urlMain";
-            this.urlMain.Size = new System.Drawing.Size(249, 25);
+            this.urlMain.Size = new System.Drawing.Size(199, 20);
             this.urlMain.TabIndex = 12;
             this.urlMain.TabStop = true;
             this.urlMain.Text = "http://www.randyrants.com/";
@@ -328,7 +342,7 @@ namespace SharpKeys
             this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainPanel.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.mainPanel.BackColor = System.Drawing.Color.Black;
             this.mainPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mainPanel.Controls.Add(this.btnLoadKeys);
             this.mainPanel.Controls.Add(this.btnSaveKeys);
@@ -345,21 +359,23 @@ namespace SharpKeys
             this.mainPanel.Controls.Add(this.btnDeleteAll);
             this.mainPanel.Controls.Add(this.btnSave);
             this.mainPanel.Controls.Add(this.btnClose);
-            this.mainPanel.Location = new System.Drawing.Point(22, 22);
-            this.mainPanel.Margin = new System.Windows.Forms.Padding(6);
+            this.mainPanel.ForeColor = System.Drawing.Color.White;
+            this.mainPanel.Location = new System.Drawing.Point(18, 18);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(5);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1113, 792);
+            this.mainPanel.Size = new System.Drawing.Size(911, 660);
             this.mainPanel.TabIndex = 12;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
             // btnLoadKeys
             // 
             this.btnLoadKeys.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnLoadKeys.BackColor = System.Drawing.SystemColors.Control;
-            this.btnLoadKeys.Location = new System.Drawing.Point(25, 627);
-            this.btnLoadKeys.Margin = new System.Windows.Forms.Padding(6);
+            this.btnLoadKeys.BackColor = System.Drawing.Color.Black;
+            this.btnLoadKeys.ForeColor = System.Drawing.Color.White;
+            this.btnLoadKeys.Location = new System.Drawing.Point(20, 522);
+            this.btnLoadKeys.Margin = new System.Windows.Forms.Padding(5);
             this.btnLoadKeys.Name = "btnLoadKeys";
-            this.btnLoadKeys.Size = new System.Drawing.Size(132, 42);
+            this.btnLoadKeys.Size = new System.Drawing.Size(108, 35);
             this.btnLoadKeys.TabIndex = 7;
             this.btnLoadKeys.Text = "L&oad keys...";
             this.btnLoadKeys.UseVisualStyleBackColor = false;
@@ -368,11 +384,12 @@ namespace SharpKeys
             // btnSaveKeys
             // 
             this.btnSaveKeys.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSaveKeys.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSaveKeys.Location = new System.Drawing.Point(168, 627);
-            this.btnSaveKeys.Margin = new System.Windows.Forms.Padding(6);
+            this.btnSaveKeys.BackColor = System.Drawing.Color.Black;
+            this.btnSaveKeys.ForeColor = System.Drawing.Color.White;
+            this.btnSaveKeys.Location = new System.Drawing.Point(137, 522);
+            this.btnSaveKeys.Margin = new System.Windows.Forms.Padding(5);
             this.btnSaveKeys.Name = "btnSaveKeys";
-            this.btnSaveKeys.Size = new System.Drawing.Size(132, 42);
+            this.btnSaveKeys.Size = new System.Drawing.Size(108, 35);
             this.btnSaveKeys.TabIndex = 8;
             this.btnSaveKeys.Text = "&Save keys...";
             this.btnSaveKeys.UseVisualStyleBackColor = false;
@@ -382,13 +399,14 @@ namespace SharpKeys
             // 
             this.headerPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.headerPanel.BackColor = System.Drawing.Color.Transparent;
+            this.headerPanel.BackColor = System.Drawing.Color.Black;
             this.headerPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.headerPanel.Controls.Add(this.displayProduct);
+            this.headerPanel.ForeColor = System.Drawing.Color.White;
             this.headerPanel.Location = new System.Drawing.Point(-2, -1);
-            this.headerPanel.Margin = new System.Windows.Forms.Padding(6);
+            this.headerPanel.Margin = new System.Windows.Forms.Padding(5);
             this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(1114, 54);
+            this.headerPanel.Size = new System.Drawing.Size(912, 45);
             this.headerPanel.TabIndex = 7;
             this.headerPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.headerPanel_Paint);
             // 
@@ -398,13 +416,14 @@ namespace SharpKeys
             | System.Windows.Forms.AnchorStyles.Right)));
             this.displayProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.displayProduct.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.displayProduct.Location = new System.Drawing.Point(18, 3);
-            this.displayProduct.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.displayProduct.Location = new System.Drawing.Point(15, 2);
+            this.displayProduct.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.displayProduct.Name = "displayProduct";
-            this.displayProduct.Size = new System.Drawing.Size(1075, 42);
+            this.displayProduct.Size = new System.Drawing.Size(880, 35);
             this.displayProduct.TabIndex = 1;
             this.displayProduct.Text = "SharpKeys";
             this.displayProduct.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.displayProduct.Click += new System.EventHandler(this.displayProduct_Click);
             // 
             // urlCode
             // 
@@ -412,10 +431,10 @@ namespace SharpKeys
             this.urlCode.AutoSize = true;
             this.urlCode.BackColor = System.Drawing.Color.Transparent;
             this.urlCode.LinkColor = System.Drawing.SystemColors.HotTrack;
-            this.urlCode.Location = new System.Drawing.Point(708, 711);
-            this.urlCode.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.urlCode.Location = new System.Drawing.Point(579, 592);
+            this.urlCode.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.urlCode.Name = "urlCode";
-            this.urlCode.Size = new System.Drawing.Size(367, 25);
+            this.urlCode.Size = new System.Drawing.Size(294, 20);
             this.urlCode.TabIndex = 11;
             this.urlCode.TabStop = true;
             this.urlCode.Text = "https://github.com/randyrants/sharpkeys/";
@@ -425,16 +444,15 @@ namespace SharpKeys
             // 
             // Dialog_Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(1159, 838);
+            this.ClientSize = new System.Drawing.Size(948, 698);
             this.Controls.Add(this.mainPanel);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6);
-            this.MinimumSize = new System.Drawing.Size(1156, 838);
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.MinimumSize = new System.Drawing.Size(950, 708);
             this.Name = "Dialog_Main";
             this.Text = "SharpKeys";
             this.Closing += new System.ComponentModel.CancelEventHandler(this.Dialog_Main_Closing);
@@ -510,6 +528,7 @@ namespace SharpKeys
         {
             // can skip the first 8 bytes as they are ALWAYS 0x00
             // the 9th byte is ALWAYS the total number of mappings (including the trailing null pointer)
+           
             if (bytes.Length > 8)
             {
                 int nTotal = Int32.Parse(bytes[8].ToString());
@@ -524,7 +543,9 @@ namespace SharpKeys
                     strToCode = string.Format("{0,2:X}_{1,2:X}", bytes[(i * 4) + 12 + 1], bytes[(i * 4) + 12 + 0]);
                     strToCode = strToCode.Replace(" ", "0");
                     strTo = string.Format("{0} ({1})", (string)m_hashKeys[strToCode], strToCode);
-
+                    //document.onkeydown = function(evt){
+                     //   console.log(evt.keyCode);
+                    //}
                     ListViewItem lvI = lvKeys.Items.Add(strFrom);
                     lvI.SubItems.Add(strTo);
                 }
@@ -1353,7 +1374,8 @@ namespace SharpKeys
 
             Graphics graphics = e.Graphics;
             LinearGradientBrush linearGradientBrush = new LinearGradientBrush(rectangle,
-                           Color.FromArgb(188, 188, 188), Color.FromArgb(225, 225, 225),
+                           //Color.FromArgb(188, 188, 188), Color.FromArgb(225, 225, 225),
+                           Color.FromArgb(3, 3, 3), Color.FromArgb(10, 10, 10),
                            LinearGradientMode.ForwardDiagonal);
 
             graphics.FillRectangle(linearGradientBrush, rectangle);
@@ -1363,6 +1385,8 @@ namespace SharpKeys
         {
             if (System.Windows.Forms.SystemInformation.HighContrast)
             {
+                this.lvKeys.ForeColor = Color.White;
+                this.lvKeys.BackColor = Color.Black;
                 return;
             }
 
@@ -1375,7 +1399,8 @@ namespace SharpKeys
 
             Graphics graphics = e.Graphics;
             LinearGradientBrush linearGradientBrush = new LinearGradientBrush(rectangle,
-                           Color.FromArgb(209, 221, 228), Color.FromArgb(237, 239, 247), //Color.FromArgb(236, 241, 243), 
+                           //Color.FromArgb(209, 221, 228), Color.FromArgb(237, 239, 247), //Color.FromArgb(236, 241, 243), 
+                           Color.FromArgb(50, 50, 50), Color.FromArgb(52, 52, 52), //Color.FromArgb(236, 241, 243), 
                            LinearGradientMode.Vertical);
 
             graphics.FillRectangle(linearGradientBrush, rectangle);
@@ -1397,7 +1422,8 @@ namespace SharpKeys
                            LinearGradientMode.Vertical);
 
             LinearGradientBrush bottomGradientBrush = new LinearGradientBrush(bottomRectangle,
-                           Color.FromArgb(13, 37, 90), Color.FromArgb(39, 37, 160),
+                           //Color.FromArgb(13, 37, 90), Color.FromArgb(39, 37, 160),
+                           Color.FromArgb(250, 37, 90), Color.FromArgb(250, 37, 160),
                            LinearGradientMode.Vertical);
 
             graphics.FillRectangle(topGradientBrush, topRectangle);
@@ -1409,6 +1435,16 @@ namespace SharpKeys
         private void Dialog_Main_Resize(object sender, EventArgs e)
         {
             this.Invalidate();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void displayProduct_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

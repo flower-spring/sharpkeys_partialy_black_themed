@@ -5,6 +5,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace SharpKeys
 {
@@ -72,12 +73,19 @@ namespace SharpKeys
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dialog_KeyPress));
             this.mainPanel = new System.Windows.Forms.Panel();
+            
             this.lblPressed = new System.Windows.Forms.Label();
+            
             this.label2 = new System.Windows.Forms.Label();
+         
             this.btnOK = new System.Windows.Forms.Button();
+            
             this.btnCancel = new System.Windows.Forms.Button();
+           
             this.lblKey = new System.Windows.Forms.Label();
+         
             this.label1 = new System.Windows.Forms.Label();
+         
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,6 +107,8 @@ namespace SharpKeys
             this.mainPanel.Size = new System.Drawing.Size(602, 325);
             this.mainPanel.TabIndex = 12;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
+            this.mainPanel.ForeColor = Color.White;
+            this.mainPanel.BackColor = Color.Black;
             // 
             // lblPressed
             // 
@@ -109,6 +119,8 @@ namespace SharpKeys
             this.lblPressed.Name = "lblPressed";
             this.lblPressed.Size = new System.Drawing.Size(0, 25);
             this.lblPressed.TabIndex = 17;
+            this.lblPressed.ForeColor = Color.White;
+            this.lblPressed.BackColor = Color.Black;
             // 
             // label2
             // 
@@ -118,6 +130,8 @@ namespace SharpKeys
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(563, 6);
             this.label2.TabIndex = 16;
+            this.label2.ForeColor = Color.White;
+            this.label2.BackColor = Color.Black;
             // 
             // btnOK
             // 
@@ -134,6 +148,8 @@ namespace SharpKeys
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            this.btnOK.ForeColor = Color.White;
+            this.btnOK.BackColor = Color.Black;
             // 
             // btnCancel
             // 
@@ -149,6 +165,8 @@ namespace SharpKeys
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnCancel.ForeColor = Color.White;
+            this.btnCancel.BackColor = Color.Black;
             // 
             // lblKey
             // 
@@ -161,6 +179,8 @@ namespace SharpKeys
             this.lblKey.TabIndex = 13;
             this.lblKey.Text = "(press a key)";
             this.lblKey.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblKey.ForeColor = Color.White;
+            this.lblKey.BackColor = Color.Black;
             // 
             // label1
             // 
@@ -172,12 +192,16 @@ namespace SharpKeys
             this.label1.Size = new System.Drawing.Size(298, 25);
             this.label1.TabIndex = 12;
             this.label1.Text = "Press a button on your keyboard.";
+            this.label1.ForeColor = Color.White;
+            this.label1.BackColor = Color.Black;
             // 
             // Dialog_KeyPress
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            //this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BackColor = Color.Black;
+            this.ForeColor = Color.Black;
             this.ClientSize = new System.Drawing.Size(647, 371);
             this.Controls.Add(this.mainPanel);
             this.DoubleBuffered = true;
@@ -283,7 +307,8 @@ namespace SharpKeys
 
             Rectangle rectangle = new Rectangle(0, 0, this.Width, this.Height);
             LinearGradientBrush linearGradientBrush = new LinearGradientBrush(rectangle,
-                           Color.FromArgb(188, 188, 188), Color.FromArgb(225, 225, 225),
+                           //Color.FromArgb(188, 188, 188), Color.FromArgb(225, 225, 225),
+                           Color.FromArgb(0, 0, 0), Color.FromArgb(1, 1, 1),
                            LinearGradientMode.ForwardDiagonal);
 
             graphics.FillRectangle(linearGradientBrush, rectangle);
@@ -300,7 +325,8 @@ namespace SharpKeys
 
             Rectangle rectangle = new Rectangle(0, 0, mainPanel.Width, mainPanel.Height);
             LinearGradientBrush linearGradientBrush = new LinearGradientBrush(rectangle,
-                           Color.FromArgb(209, 221, 228), Color.FromArgb(237, 239, 247), //Color.FromArgb(236, 241, 243), 
+                           //Color.FromArgb(209, 221, 228), Color.FromArgb(237, 239, 247), //Color.FromArgb(236, 241, 243), 
+                           Color.FromArgb(53, 53, 53), Color.FromArgb(54, 54, 54), //Color.FromArgb(236, 241, 243), 
                            LinearGradientMode.Vertical);
 
             graphics.FillRectangle(linearGradientBrush, rectangle);

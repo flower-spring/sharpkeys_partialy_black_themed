@@ -64,13 +64,25 @@ namespace SharpKeys
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dialog_KeyItem));
             this.lbFrom = new System.Windows.Forms.ListBox();
+            this.lbFrom.ForeColor = Color.White;
+            this.lbFrom.BackColor = Color.Black;
             this.btnFrom = new System.Windows.Forms.Button();
+            this.btnFrom.ForeColor = Color.White;
+            this.btnFrom.BackColor = Color.Black;
             this.btnTo = new System.Windows.Forms.Button();
             this.lbTo = new System.Windows.Forms.ListBox();
+            this.lbTo.ForeColor = Color.White;
+            this.lbTo.BackColor = Color.Black;
             this.btnOK = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox2.ForeColor = Color.White;
+            this.groupBox2.BackColor = Color.Black;
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.ForeColor = Color.White;
+            this.groupBox1.BackColor = Color.Black;
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.mainPanel.ForeColor = Color.White;
+            this.mainPanel.BackColor = Color.Black;
             this.btnCancel = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -91,7 +103,9 @@ namespace SharpKeys
             // btnFrom
             // 
             this.btnFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFrom.BackColor = System.Drawing.SystemColors.Control;
+            //this.btnFrom.BackColor = System.Drawing.SystemColors.Control;
+            this.btnFrom.BackColor = Color.DarkBlue;
+            this.btnFrom.ForeColor = Color.White;
             this.btnFrom.Location = new System.Drawing.Point(301, 574);
             this.btnFrom.Margin = new System.Windows.Forms.Padding(6);
             this.btnFrom.Name = "btnFrom";
@@ -104,7 +118,8 @@ namespace SharpKeys
             // btnTo
             // 
             this.btnTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTo.BackColor = System.Drawing.SystemColors.Control;
+            //this.btnTo.BackColor = System.Drawing.SystemColors.Control;
+            
             this.btnTo.Location = new System.Drawing.Point(301, 574);
             this.btnTo.Margin = new System.Windows.Forms.Padding(6);
             this.btnTo.Name = "btnTo";
@@ -113,6 +128,8 @@ namespace SharpKeys
             this.btnTo.Text = "Type K&ey";
             this.btnTo.UseVisualStyleBackColor = false;
             this.btnTo.Click += new System.EventHandler(this.btnTo_Click);
+            this.btnFrom.BackColor = Color.Black;
+            this.btnFrom.ForeColor = Color.White;
             // 
             // lbTo
             // 
@@ -124,11 +141,15 @@ namespace SharpKeys
             this.lbTo.ScrollAlwaysVisible = true;
             this.lbTo.Size = new System.Drawing.Size(418, 506);
             this.lbTo.TabIndex = 1;
+            this.lbTo.BackColor = Color.Black;
+            this.lbTo.ForeColor = Color.White;
             // 
             // btnOK
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOK.BackColor = System.Drawing.SystemColors.Control;
+            //this.btnOK.BackColor = System.Drawing.SystemColors.Control;
+            this.btnOK.ForeColor = Color.White;
+            this.btnOK.BackColor = Color.Black;
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnOK.Location = new System.Drawing.Point(673, 689);
             this.btnOK.Margin = new System.Windows.Forms.Padding(6);
@@ -150,6 +171,8 @@ namespace SharpKeys
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "&To this key:";
+            this.groupBox2.ForeColor = Color.White;
+            this.groupBox2.BackColor = Color.Black;
             // 
             // groupBox1
             // 
@@ -163,13 +186,19 @@ namespace SharpKeys
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "&Map this key:";
+            this.groupBox1.ForeColor = Color.White;
+            this.groupBox1.BackColor = Color.Black;
             // 
             // mainPanel
             // 
             this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainPanel.BackColor = System.Drawing.Color.Transparent;
+            //this.mainPanel.BackColor = System.Drawing.Color.Transparent;
+            //this.mainPanel.BackColor = Color.DarkBlue;
+            //this.mainPanel.ForeColor = System.Drawing.Color.Red;
+            this.mainPanel.ForeColor = Color.White;
+            this.mainPanel.BackColor = Color.Black;
             this.mainPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mainPanel.Controls.Add(this.groupBox1);
             this.mainPanel.Controls.Add(this.btnOK);
@@ -185,7 +214,9 @@ namespace SharpKeys
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.BackColor = System.Drawing.SystemColors.Control;
+            //this.btnCancel.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCancel.ForeColor = Color.White;
+            this.btnCancel.BackColor = Color.Black;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Location = new System.Drawing.Point(820, 689);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(6);
@@ -199,11 +230,12 @@ namespace SharpKeys
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            //this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(1029, 801);
             this.Controls.Add(this.mainPanel);
             this.DoubleBuffered = true;
-            this.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.ForeColor = Color.White;
+            this.BackColor = Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
@@ -268,7 +300,8 @@ namespace SharpKeys
 
             Rectangle rectangle = new Rectangle(0, 0, this.Width, this.Height);
             LinearGradientBrush linearGradientBrush = new LinearGradientBrush(rectangle,
-                           Color.FromArgb(188, 188, 188), Color.FromArgb(225, 225, 225),
+                           //Color.FromArgb(188, 188, 188), Color.FromArgb(225, 225, 225),
+                           Color.FromArgb(1, 1, 1), Color.FromArgb(3, 3, 3),
                            LinearGradientMode.ForwardDiagonal);
 
             graphics.FillRectangle(linearGradientBrush, rectangle);
@@ -285,7 +318,8 @@ namespace SharpKeys
 
             Rectangle rectangle = new Rectangle(0, 0, mainPanel.Width, mainPanel.Height);
             LinearGradientBrush linearGradientBrush = new LinearGradientBrush(rectangle,
-                           Color.FromArgb(209, 221, 228), Color.FromArgb(237, 239, 247), //Color.FromArgb(236, 241, 243), 
+                           //Color.FromArgb(209, 221, 228), Color.FromArgb(237, 239, 247), //Color.FromArgb(236, 241, 243), 
+                           Color.FromArgb(55, 55, 55), Color.FromArgb(56, 56, 56), //Color.FromArgb(236, 241, 243), 
                            LinearGradientMode.Vertical);
 
             graphics.FillRectangle(linearGradientBrush, rectangle);
