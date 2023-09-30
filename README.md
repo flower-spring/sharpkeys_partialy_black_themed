@@ -1,3 +1,8 @@
+# Original sharpkeys but with theme black
+![image](https://github.com/flower-spring/sharpkeys_partialy_black_themed/assets/71689178/11d6bc79-d425-4e61-bc70-d1646a4ed973)
+
+
+
 ## Project Description
 SharpKeys is a utility that manages a Registry key that allows Windows to remap one key to any other key. Included in the application is a list of common keyboard keys and a Type Key feature to automatically recognize most keyboard keys. It was originally developed in C# using .NET v2 but has been updated to support .NET 4.0 Client Profile
 
